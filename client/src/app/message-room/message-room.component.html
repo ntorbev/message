@@ -1,0 +1,9 @@
+<mat-list >
+  <mat-list-item *ngFor="let message of messages">
+    <h3 matLine> {{message}} </h3>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+
+<input [(ngModel)]="message" (keyup)="$event.keyCode == 13 && sendMessage()" />
+<button (click)="sendMessage()">Send</button>
